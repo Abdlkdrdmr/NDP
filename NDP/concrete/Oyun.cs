@@ -121,6 +121,7 @@ namespace NDP.concrete
         }
         public void ZamanlayıcıyıDurdur()
         {
+
             _hareketTimer.Stop();
             _denizaltıoluşmaTimerı.Stop();
         }
@@ -137,6 +138,7 @@ namespace NDP.concrete
             DevamEdiyorMu = false;
             ZamanlayıcıyıDurdur();
         }
+
 
         public void GemiyiHareketEttir(Yon yon)
         {

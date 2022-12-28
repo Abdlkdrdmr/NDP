@@ -43,9 +43,12 @@ namespace NDP
             {
                 case Keys.Enter:
                     _oyun.Başlat();
+                    
                     timer1.Interval = 1000; // 1 saniye aralıklarla çalışacak
                     timer1.Start(); // timer'ı başlat
+                    oyunDuraklatıldı = false;//sürenin devam etmesi için kullanıldı
                     _oyun.ZamanlayıcıyıBaşlat();
+
                     break;
                 case Keys.Right:
                     _oyun.GemiyiHareketEttir(Enum.Yon.sağa);
@@ -57,12 +60,10 @@ namespace NDP
                     _oyun.AteşEt();
                     break;
                 case Keys.P:
-                    oyunDuraklatıldı = !oyunDuraklatıldı;
-                    _oyun.ZamanlayıcıyıDurdur();
+                    oyunDuraklatıldı = !oyunDuraklatıldı;//duraklatmak için kullanıldı.
+                    _oyun.ZamanlayıcıyıDurdur();             
                     break;
-                
-                
-
+               
 
             }
                 
