@@ -18,6 +18,7 @@ namespace NDP
     {
         private readonly Oyun _oyun;//_oyun adında bir değişken tanımlıyoruz.
         private int gerisayım;
+        private bool oyunDuraklatıldı;
 
         public AnaForm(int gerisayım)
         {
@@ -25,6 +26,8 @@ namespace NDP
 
             this.gerisayım = gerisayım;
             _oyun = new Oyun(panelGemi, panelSavaşalanı);
+            oyunDuraklatıldı = false;
+
         }
 
 
@@ -42,6 +45,7 @@ namespace NDP
                     _oyun.Başlat();
                     timer1.Interval = 1000; // 1 saniye aralıklarla çalışacak
                     timer1.Start(); // timer'ı başlat
+                    _oyun.ZamanlayıcıyıBaşlat();
                     break;
                 case Keys.Right:
                     _oyun.GemiyiHareketEttir(Enum.Yon.sağa);
@@ -53,8 +57,11 @@ namespace NDP
                     _oyun.AteşEt();
                     break;
                 case Keys.P:
-                    _oyun.Duraklat();
+                    oyunDuraklatıldı = !oyunDuraklatıldı;
+                    _oyun.ZamanlayıcıyıDurdur();
                     break;
+                
+                
 
 
             }
@@ -63,17 +70,19 @@ namespace NDP
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            gerisayım--; // sayacı bir azalt
-            geriSayımLabeli.Text = gerisayım.ToString(); // label e sayacı yamasını söyledim
-           
-            if (gerisayım == 0) // sayac 0'a ulaştıysa
+            gerisayım--;
+            geriSayımLabeli.Text = gerisayım.ToString();
+
+            if (gerisayım == 0 || oyunDuraklatıldı)
             {
-                timer1.Stop(); // timer'ı durdur
-                
-                
-                MessageBox.Show("puanınız:"+label5.Text); // mesaj göster
+                timer1.Stop();
+
+                if (gerisayım == 0)
+                {
+                    MessageBox.Show("puanınız:" + label5.Text);
+                }
             }
-            else if(gerisayım<0)
+            else if (gerisayım < 0)
             {
                 timer1.Stop();
                 gerisayım = 0;

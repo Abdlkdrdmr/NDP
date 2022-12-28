@@ -113,13 +113,13 @@ namespace NDP.concrete
             _PanelSavaşalanı.Controls.Add(denizaltı);
         }
 
-        private void ZamanlayıcıyıBaşlat()
+        public void ZamanlayıcıyıBaşlat()
         {
             _hareketTimer.Start();
             _denizaltıoluşmaTimerı.Start();
 
         }
-        private void ZamanlayıcıyıDurdur()
+        public void ZamanlayıcıyıDurdur()
         {
             _hareketTimer.Stop();
             _denizaltıoluşmaTimerı.Stop();
@@ -136,11 +136,6 @@ namespace NDP.concrete
             if (!DevamEdiyorMu) return;
             DevamEdiyorMu = false;
             ZamanlayıcıyıDurdur();
-        }
-
-        public void Duraklat()
-        {
-            throw new NotImplementedException();
         }
 
         public void GemiyiHareketEttir(Yon yon)

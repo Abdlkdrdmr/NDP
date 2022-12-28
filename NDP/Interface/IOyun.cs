@@ -14,7 +14,9 @@ namespace NDP.Interface
         void Başlat();
         void AteşEt();
         void GemiyiHareketEttir(Yon yon);//parametre adı olarak yon kullanıldı.
-        void Duraklat();
+        
+        void ZamanlayıcıyıDurdur();
+        void ZamanlayıcıyıBaşlat();
 
     }
 }
