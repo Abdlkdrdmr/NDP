@@ -80,6 +80,7 @@ namespace NDP
 
                 if (gerisayım == 0)
                 {
+                    _oyun.ZamanlayıcıyıDurdur();
                     MessageBox.Show("puanınız:" + label5.Text);
                 }
             }
