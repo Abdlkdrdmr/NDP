@@ -8,14 +8,17 @@ using System.Threading.Tasks;
 
 namespace NDP.concrete
 {
-    internal class Kutu : Cisim//oluşturduğum her gemi aynı zamanda bir cisim dir,her cisim bir picturebox dır.
+    internal class Kutu : Cisim
     {
-       // private static readonly Random Random = new Random();
+       private static readonly Random Random1 = new Random();
         public Kutu(int panelGenişliği, Size hareketAlanıBoyutları) : base(hareketAlanıBoyutları)
         {
-            Image = Properties.Resources.house;
+            Image = Properties.Resources.giftbox;
             BackColor = Color.Transparent;
-            //Bottom = Random.Next(hareketAlanıBoyutları.Height - Height + 1);
+            
+            Left=Random1.Next(hareketAlanıBoyutları.Width-Width+1);
+            
+           
         }
     }
 }

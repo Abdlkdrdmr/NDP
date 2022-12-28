@@ -20,6 +20,12 @@ namespace NDP.concrete
             _PanelSavaşalanı = panelSavaşalanı;
             _hareketTimer.Tick += _hareketTimer_Tick;
             _denizaltıoluşmaTimerı.Tick += DenizAltıOluşmaTimer_Tick;
+            _kutuoluşturmaTimer.Tick += _kutuoluşturmaTimer_Tick;
+        }
+
+        private void _kutuoluşturmaTimer_Tick(object sender, EventArgs e)
+        {
+            KutuOluştur();
         }
 
         private void _hareketTimer_Tick(object sender, EventArgs e)
@@ -57,7 +63,7 @@ namespace NDP.concrete
                 }
             }
         }
-
+       
         private void DenizAltıOluşmaTimer_Tick(object sender, EventArgs e)
         {
             DenizaltıOluştur();
@@ -86,8 +92,9 @@ namespace NDP.concrete
         private readonly List<Mermi> _mermiler = new List<Mermi>();
         private readonly Timer _hareketTimer = new Timer { Interval = 100 };
         private readonly Timer _denizaltıoluşmaTimerı = new Timer { Interval = 3000 };//her üç saniyede bir denizaltı oluşturucak
-        private readonly List<Denizaltı> _denizaltı = new List<Denizaltı>(); 
-
+        private readonly List<Denizaltı> _denizaltı = new List<Denizaltı>();
+        private readonly Timer _kutuoluşturmaTimer = new Timer { Interval = 10000 };  //10 saniyede bir kutu oluşacak
+        private readonly List<Kutu>_kutular=new List<Kutu>();
         public void AteşEt()
         {
             if (!DevamEdiyorMu) return;
@@ -112,6 +119,7 @@ namespace NDP.concrete
         private void KutuOluştur()
         {
             var kutu = new Kutu(_PanelGemi.Width, _PanelGemi.Size);
+            _kutular.Add(kutu);
             _PanelGemi.Controls.Add(kutu);
             
         }
@@ -127,6 +135,7 @@ namespace NDP.concrete
         {
             _hareketTimer.Start();
             _denizaltıoluşmaTimerı.Start();
+            _kutuoluşturmaTimer.Start();
 
         }
         public void ZamanlayıcıyıDurdur()
@@ -134,6 +143,7 @@ namespace NDP.concrete
 
             _hareketTimer.Stop();
             _denizaltıoluşmaTimerı.Stop();
+            _kutuoluşturmaTimer.Stop();
         }
         private void GemiOluştur()
         {//geminin olduğu panelin size ını Gemi ye gönderiyoruz Gemi aldığı HareketAlanıBoyutlarını cisim e gönderiyor ve artık hareketalanı boyutlarını kullanabilirz. 
