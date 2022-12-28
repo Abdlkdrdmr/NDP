@@ -10,8 +10,9 @@
 
 namespace NDP.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   Yerelleştirilmiş dizeleri aramak gibi işlemler için, türü kesin olarak belirtilmiş kaynak sınıfı.
     /// </summary>
@@ -23,7 +24,7 @@ namespace NDP.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+        internal static Image submarine;
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -96,6 +97,16 @@ namespace NDP.Properties {
         internal static System.Drawing.Bitmap folder {
             get {
                 object obj = ResourceManager.GetObject("folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap gemi {
+            get {
+                object obj = ResourceManager.GetObject("gemi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +197,16 @@ namespace NDP.Properties {
         internal static System.Drawing.Bitmap savaşalanı {
             get {
                 object obj = ResourceManager.GetObject("savaşalanı", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap ship {
+            get {
+                object obj = ResourceManager.GetObject("ship", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

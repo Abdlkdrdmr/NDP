@@ -32,28 +32,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.comboboxzorlukseviyesi = new System.Windows.Forms.ComboBox();
+            this.textboxoyuncuadı = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textboxoyuncuadı = new System.Windows.Forms.TextBox();
-            this.comboboxzorlukseviyesi = new System.Windows.Forms.ComboBox();
-            this.textboxsüre = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,6 +91,126 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "En iyi skorları görüntülemek için tıklayınız.";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
+            this.panel1.Controls.Add(this.maskedTextBox1);
+            this.panel1.Controls.Add(this.comboboxzorlukseviyesi);
+            this.panel1.Controls.Add(this.textboxoyuncuadı);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(660, 341);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(262, 134);
+            this.panel1.TabIndex = 7;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(138, 88);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(124, 20);
+            this.maskedTextBox1.TabIndex = 6;
+            // 
+            // comboboxzorlukseviyesi
+            // 
+            this.comboboxzorlukseviyesi.FormattingEnabled = true;
+            this.comboboxzorlukseviyesi.Location = new System.Drawing.Point(138, 52);
+            this.comboboxzorlukseviyesi.Name = "comboboxzorlukseviyesi";
+            this.comboboxzorlukseviyesi.Size = new System.Drawing.Size(121, 21);
+            this.comboboxzorlukseviyesi.TabIndex = 4;
+            // 
+            // textboxoyuncuadı
+            // 
+            this.textboxoyuncuadı.Location = new System.Drawing.Point(138, 22);
+            this.textboxoyuncuadı.Name = "textboxoyuncuadı";
+            this.textboxoyuncuadı.Size = new System.Drawing.Size(121, 20);
+            this.textboxoyuncuadı.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label6.Location = new System.Drawing.Point(3, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 16);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Süre                       :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label5.Location = new System.Drawing.Point(3, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Zorluk Seviyesi    :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label4.Location = new System.Drawing.Point(3, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Oyuncu Adı           :";
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(30, 328);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(442, 82);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Geminizi hareket ettirmek için yön tuşların kullanınız.\r\nMermi atışı için Space t" +
+    "uşuna basınız.\r\nOyunu durdurmak için P tuşuna basınız. ";
+            this.label7.Visible = false;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(42, 453);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 20);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "label8";
+            this.label8.Visible = false;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
+            this.pictureBox6.Image = global::NDP.Properties.Resources.close;
+            this.pictureBox6.Location = new System.Drawing.Point(1562, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(42, 38);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::NDP.Properties.Resources.başla;
+            this.pictureBox5.Location = new System.Drawing.Point(740, 481);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -130,136 +250,16 @@
             this.pictureBox1.Image = global::NDP.Properties.Resources.menü_resmi;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1604, 881);
+            this.pictureBox1.Size = new System.Drawing.Size(1486, 746);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
-            this.panel1.Controls.Add(this.textboxsüre);
-            this.panel1.Controls.Add(this.comboboxzorlukseviyesi);
-            this.panel1.Controls.Add(this.textboxoyuncuadı);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(660, 341);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 134);
-            this.panel1.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Location = new System.Drawing.Point(3, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Oyuncu Adı           :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Location = new System.Drawing.Point(3, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Zorluk Seviyesi    :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label6.Location = new System.Drawing.Point(3, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 16);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Süre                       :";
-            // 
-            // textboxoyuncuadı
-            // 
-            this.textboxoyuncuadı.Location = new System.Drawing.Point(138, 22);
-            this.textboxoyuncuadı.Name = "textboxoyuncuadı";
-            this.textboxoyuncuadı.Size = new System.Drawing.Size(121, 20);
-            this.textboxoyuncuadı.TabIndex = 3;
-            // 
-            // comboboxzorlukseviyesi
-            // 
-            this.comboboxzorlukseviyesi.FormattingEnabled = true;
-            this.comboboxzorlukseviyesi.Location = new System.Drawing.Point(138, 52);
-            this.comboboxzorlukseviyesi.Name = "comboboxzorlukseviyesi";
-            this.comboboxzorlukseviyesi.Size = new System.Drawing.Size(121, 21);
-            this.comboboxzorlukseviyesi.TabIndex = 4;
-            // 
-            // textboxsüre
-            // 
-            this.textboxsüre.Location = new System.Drawing.Point(138, 89);
-            this.textboxsüre.Name = "textboxsüre";
-            this.textboxsüre.Size = new System.Drawing.Size(121, 20);
-            this.textboxsüre.TabIndex = 5;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::NDP.Properties.Resources.başla;
-            this.pictureBox5.Location = new System.Drawing.Point(740, 481);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
-            this.pictureBox6.Image = global::NDP.Properties.Resources.close;
-            this.pictureBox6.Location = new System.Drawing.Point(1562, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(42, 38);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(30, 328);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(442, 82);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Geminizi hareket ettirmek için yön tuşların kullanınız.\r\nMermi atışı için Space t" +
-    "uşuna basınız.\r\nOyunu durdurmak için P tuşuna basınız. ";
-            this.label7.Visible = false;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(42, 453);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 20);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "label8";
-            this.label8.Visible = false;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.ClientSize = new System.Drawing.Size(1486, 746);
             this.ControlBox = false;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox6);
@@ -277,14 +277,14 @@
             this.Text = resources.GetString("$this.Text");
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,7 +300,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textboxsüre;
         private System.Windows.Forms.ComboBox comboboxzorlukseviyesi;
         private System.Windows.Forms.TextBox textboxoyuncuadı;
         private System.Windows.Forms.Label label6;
@@ -310,6 +309,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 

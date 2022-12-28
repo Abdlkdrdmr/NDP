@@ -46,25 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\Cisim.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="concrete\Gemi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="concrete\Oyun.cs" />
+    <Compile Include="Enum\Yon.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="AnaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IHareketEden.cs" />
+    <Compile Include="Interface\IOyun.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +146,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menü resmi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Static\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static NDP.Form2;
+using static NDP.AnaForm;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NDP
 {
     public partial class Form1 : Form
     {
+       
         public Form1()
         {
             InitializeComponent();
@@ -21,8 +22,15 @@ namespace NDP
             comboboxzorlukseviyesi.Items.Add(ZorlukSeviyesi.Kolay);
             comboboxzorlukseviyesi.Items.Add(ZorlukSeviyesi.Orta);
             comboboxzorlukseviyesi.Items.Add(ZorlukSeviyesi.Zor);
-        }
 
+            
+        }
+        public enum ZorlukSeviyesi
+        {
+            Kolay,
+            Orta,
+            Zor
+        }
         private void TıklamaOlayı1(object sender, EventArgs e)
         {
             if (label7.Visible == false)
@@ -61,11 +69,12 @@ namespace NDP
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
+            Application.Exit();//Bütün uygulamaları kapatmak için kullandım.
             Close();
         }
 
@@ -92,8 +101,17 @@ namespace NDP
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            try
+            {
+                int gerisayım = Convert.ToInt32(maskedTextBox1.Text);
+            
+            AnaForm form2 = new AnaForm(gerisayım);
             form2.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lütfen süre giriniz");
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
