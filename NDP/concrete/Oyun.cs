@@ -25,7 +25,39 @@ namespace NDP.concrete
         private void _hareketTimer_Tick(object sender, EventArgs e)
         {
             MermileriHareketEttir();
+            DenizaltılarıHareketEttir();
+            VurulanDenizaltılarıÇıkar();
         }
+
+        private void VurulanDenizaltılarıÇıkar()
+        {
+            for (var i=_denizaltı.Count-1;i>=0;i--)
+            {
+                var denizaltı = _denizaltı[i];
+                var vuranMermi = denizaltı.VurulduMu(_mermiler);
+                if (vuranMermi is null) continue;
+                _denizaltı.Remove(denizaltı);
+                _mermiler.Remove(vuranMermi); 
+                _PanelSavaşalanı.Controls.Remove(denizaltı);
+                _PanelSavaşalanı.Controls.Remove(vuranMermi );
+            }
+            
+        }
+
+        private void DenizaltılarıHareketEttir()
+        {
+            for (int i = _denizaltı.Count - 1; i >= 0; i--)
+            {
+                var denizaltı = _denizaltı[i];
+                var sınıraUlaştım = denizaltı.HareketEttir(Yon.sağa);
+                if (sınıraUlaştım)
+                {
+                    _denizaltı.Remove(denizaltı);//Mermilerin savaş alanı dışına çıktığında mermilerin listeden silinmesi
+                    _PanelSavaşalanı.Controls.Remove(denizaltı);
+                }
+            }
+        }
+
         private void DenizAltıOluşmaTimer_Tick(object sender, EventArgs e)
         {
             DenizaltıOluştur();
@@ -52,7 +84,7 @@ namespace NDP.concrete
         private Gemi _gemi;
         private readonly List<Mermi> _mermiler = new List<Mermi>();
         private readonly Timer _hareketTimer = new Timer { Interval = 100 };
-        private readonly Timer _denizaltıoluşmaTimerı = new Timer { Interval = 2000 };//her iki saniyede bir denizaltı oluşturucak
+        private readonly Timer _denizaltıoluşmaTimerı = new Timer { Interval = 3000 };//her üç saniyede bir denizaltı oluşturucak
         private readonly List<Denizaltı> _denizaltı = new List<Denizaltı>(); 
 
         public void AteşEt()

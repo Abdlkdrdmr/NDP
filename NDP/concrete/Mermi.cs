@@ -16,7 +16,7 @@ namespace NDP.concrete
             BackColor = Color.Transparent;
 
             Location = new Point((_gemi.Location.X + _gemi.Width / 2) - 15, _gemi.Top + 2);//merminin geminin ortasına hizalanmasını sağladım
-            HareketMesafesi = (Int16) (Height * 0.5);
+            HareketMesafesi = (Int16) (Height * 1.5);
         }
     }
 }
