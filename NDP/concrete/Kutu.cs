@@ -13,7 +13,7 @@ namespace NDP.concrete
        // private static readonly Random Random = new Random();
         public Kutu(int panelGenişliği, Size hareketAlanıBoyutları) : base(hareketAlanıBoyutları)
         {
-            Image = Properties.Resources.submarine__1_;
+            Image = Properties.Resources.house;
             BackColor = Color.Transparent;
             //Bottom = Random.Next(hareketAlanıBoyutları.Height - Height + 1);
         }

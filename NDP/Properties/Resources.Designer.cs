@@ -133,6 +133,16 @@ namespace NDP.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap giftbox {
+            get {
+                object obj = ResourceManager.GetObject("giftbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Gökyüzü {
             get {
                 object obj = ResourceManager.GetObject("Gökyüzü", resourceCulture);
