@@ -49,6 +49,9 @@
     <Compile Include="Abstract\Cisim.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="concrete\Denizaltı.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="concrete\Gemi.cs">
       <SubType>Component</SubType>
     </Compile>

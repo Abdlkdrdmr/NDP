@@ -19,19 +19,31 @@ namespace NDP.concrete
             _PanelGemi = panelGemi;
             _PanelSavaşalanı = panelSavaşalanı;
             _hareketTimer.Tick += _hareketTimer_Tick;
+            _denizaltıoluşmaTimerı.Tick += DenizAltıOluşmaTimer_Tick;
         }
 
         private void _hareketTimer_Tick(object sender, EventArgs e)
         {
             MermileriHareketEttir();
         }
+        private void DenizAltıOluşmaTimer_Tick(object sender, EventArgs e)
+        {
+            DenizaltıOluştur();
+        }
 
         private void MermileriHareketEttir()
         {
-            foreach(var mermi in _mermiler)
+            for (int i = _mermiler.Count -1; i >= 0; i--)
             {
-                mermi.HareketEttir(Yon.Aşağı);
+                var mermi = _mermiler[i];
+                var sınıraUlaştım = mermi.HareketEttir(Yon.Aşağı);
+                if (sınıraUlaştım)
+                {
+                    _mermiler.Remove(mermi);//Mermilerin savaş alanı dışına çıktığında mermilerin listeden silinmesi
+                    _PanelSavaşalanı.Controls.Remove(mermi);
+                }
             }
+           
         }
 
         public bool DevamEdiyorMu { get; private set; }
@@ -40,7 +52,9 @@ namespace NDP.concrete
         private Gemi _gemi;
         private readonly List<Mermi> _mermiler = new List<Mermi>();
         private readonly Timer _hareketTimer = new Timer { Interval = 100 };
-        
+        private readonly Timer _denizaltıoluşmaTimerı = new Timer { Interval = 2000 };//her iki saniyede bir denizaltı oluşturucak
+        private readonly List<Denizaltı> _denizaltı = new List<Denizaltı>(); 
+
         public void AteşEt()
         {
             if (!DevamEdiyorMu) return;
@@ -56,14 +70,27 @@ namespace NDP.concrete
             
             ZamanlayıcıyıBaşlat();
             GemiOluştur();
+            DenizaltıOluştur();
+
         }
+
+        private void DenizaltıOluştur()
+        {
+            var denizaltı = new Denizaltı(_PanelSavaşalanı.Size);
+            _denizaltı.Add(denizaltı);
+            _PanelSavaşalanı.Controls.Add(denizaltı);
+        }
+
         private void ZamanlayıcıyıBaşlat()
         {
             _hareketTimer.Start();
+            _denizaltıoluşmaTimerı.Start();
+
         }
         private void ZamanlayıcıyıDurdur()
         {
             _hareketTimer.Stop();
+            _denizaltıoluşmaTimerı.Stop();
         }
         private void GemiOluştur()
         {//geminin olduğu panelin size ını Gemi ye gönderiyoruz Gemi aldığı HareketAlanıBoyutlarını cisim e gönderiyor ve artık hareketalanı boyutlarını kullanabilirz. 

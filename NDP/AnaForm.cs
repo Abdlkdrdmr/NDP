@@ -69,7 +69,7 @@ namespace NDP
             if (gerisayım == 0) // sayac 0'a ulaştıysa
             {
                 timer1.Stop(); // timer'ı durdur
-
+                
                 
                 MessageBox.Show("puanınız:"+label5.Text); // mesaj göster
             }
