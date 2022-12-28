@@ -10,9 +10,8 @@
 
 namespace NDP.Properties {
     using System;
-    using System.Drawing;
-
-
+    
+    
     /// <summary>
     ///   Yerelleştirilmiş dizeleri aramak gibi işlemler için, türü kesin olarak belirtilmiş kaynak sınıfı.
     /// </summary>
@@ -24,7 +23,7 @@ namespace NDP.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        internal static Image submarine;
+        
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -177,6 +176,26 @@ namespace NDP.Properties {
         internal static System.Drawing.Bitmap menü_resmi {
             get {
                 object obj = ResourceManager.GetObject("menü resmi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap mermi {
+            get {
+                object obj = ResourceManager.GetObject("mermi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap mermi1 {
+            get {
+                object obj = ResourceManager.GetObject("mermi1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaForm));
             this.panelBilgi = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.geriSayımLabeli = new System.Windows.Forms.Label();
             this.labelkalansüre = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panelSavaşalanı = new System.Windows.Forms.Panel();
             this.panelGemi = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -79,6 +79,23 @@
             this.panelBilgi.Name = "panelBilgi";
             this.panelBilgi.Size = new System.Drawing.Size(200, 769);
             this.panelBilgi.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(165, 38);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Kapat";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(-3, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 27);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Menüye dön";
             // 
             // label8
             // 
@@ -174,23 +191,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(-3, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 27);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Menüye dön";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(165, 38);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Kapat";
             // 
             // panelSavaşalanı
             // 

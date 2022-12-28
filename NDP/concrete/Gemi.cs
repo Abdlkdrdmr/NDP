@@ -16,7 +16,7 @@ namespace NDP.concrete
             Image = Properties.Resources.gemi;
             Left = (panelGenişliği - Width) / 2;
             Size = new Size(128, 128);//yüklenecek geminin boyutlarını ayarladım.
-            BackColor = Color.FromArgb(0x44, 0xfc, 0xfb);//resmin arka planının panel ile aynı olmasını sağladım
+            BackColor = Color.Transparent;
             HareketMesafesi = Width;
         }
     }

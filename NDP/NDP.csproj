@@ -52,6 +52,9 @@
     <Compile Include="concrete\Gemi.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="concrete\Mermi.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="concrete\Oyun.cs" />
     <Compile Include="Enum\Yon.cs" />
     <Compile Include="Form1.cs">
@@ -155,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gemi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mermi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
