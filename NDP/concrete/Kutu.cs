@@ -17,8 +17,8 @@ namespace NDP.concrete
             BackColor = Color.Transparent;
             
             Left=Random1.Next(hareketAlanıBoyutları.Width-Width+1);
-            
            
+
         }
     }
 }
