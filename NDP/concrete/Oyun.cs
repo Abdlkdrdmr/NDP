@@ -82,6 +82,7 @@ namespace NDP.concrete
         public readonly Panel _PanelGemi;
         public readonly Panel _PanelSavaşalanı;
         private Gemi _gemi;
+        private Kutu _kutu;
         private readonly List<Mermi> _mermiler = new List<Mermi>();
         private readonly Timer _hareketTimer = new Timer { Interval = 100 };
         private readonly Timer _denizaltıoluşmaTimerı = new Timer { Interval = 3000 };//her üç saniyede bir denizaltı oluşturucak
@@ -103,7 +104,16 @@ namespace NDP.concrete
             ZamanlayıcıyıBaşlat();
             GemiOluştur();
             DenizaltıOluştur();
+            KutuOluştur();
+            
 
+        }
+
+        private void KutuOluştur()
+        {
+            var kutu = new Kutu(_PanelGemi.Width, _PanelGemi.Size);
+            _PanelGemi.Controls.Add(kutu);
+            
         }
 
         private void DenizaltıOluştur()
