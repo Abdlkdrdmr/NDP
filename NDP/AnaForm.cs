@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace NDP
 {
     public partial class AnaForm : Form
@@ -19,6 +20,8 @@ namespace NDP
         private readonly Oyun _oyun;//_oyun adında bir değişken tanımlıyoruz.
         private int gerisayım;
         private bool oyunDuraklatıldı;
+        
+
 
         public AnaForm(int gerisayım)
         {
@@ -27,9 +30,10 @@ namespace NDP
             this.gerisayım = gerisayım;
             _oyun = new Oyun(panelGemi, panelSavaşalanı);
             oyunDuraklatıldı = false;
-
+            
         }
 
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -103,5 +107,7 @@ namespace NDP
             Form1 getir= new Form1();
             getir.Show();
         }
+
+
     }
 }

@@ -23,6 +23,7 @@ namespace NDP.concrete
             _kutuoluşturmaTimer.Tick += _kutuoluşturmaTimer_Tick;
         }
 
+
         private void _kutuoluşturmaTimer_Tick(object sender, EventArgs e)
         {
             KutuOluştur();
@@ -85,6 +86,10 @@ namespace NDP.concrete
         }
 
         public bool DevamEdiyorMu { get; private set; }
+       
+        
+       
+
         public readonly Panel _PanelGemi;
         public readonly Panel _PanelSavaşalanı;
         private Gemi _gemi;
@@ -95,6 +100,7 @@ namespace NDP.concrete
         private readonly List<Denizaltı> _denizaltı = new List<Denizaltı>();
         private readonly Timer _kutuoluşturmaTimer = new Timer { Interval = 10000 };  //10 saniyede bir kutu oluşacak
         private readonly List<Kutu>_kutular=new List<Kutu>();
+      
         public void AteşEt()
         {
             if (!DevamEdiyorMu) return;
@@ -129,6 +135,7 @@ namespace NDP.concrete
             var denizaltı = new Denizaltı(_PanelSavaşalanı.Size);
             _denizaltı.Add(denizaltı);
             _PanelSavaşalanı.Controls.Add(denizaltı);
+            
         }
 
         public void ZamanlayıcıyıBaşlat()
