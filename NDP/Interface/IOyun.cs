@@ -19,5 +19,8 @@ namespace NDP.Interface
         void ZamanlayıcıyıDurdur();
         void ZamanlayıcıyıBaşlat();
         
+        
+
+
     }
 }

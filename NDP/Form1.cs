@@ -14,7 +14,7 @@ namespace NDP
 {
     public partial class Form1 : Form
     {
-       
+        
         public Form1()
         {
             InitializeComponent();
@@ -25,13 +25,13 @@ namespace NDP
 
             
         }
-        public enum ZorlukSeviyesi
+        public enum ZorlukSeviyesi//zorluk seviyesi enumları
         {
             Kolay,
             Orta,
             Zor
         }
-        private void TıklamaOlayı1(object sender, EventArgs e)
+        private void TıklamaOlayı1(object sender, EventArgs e)// oyun içi bilgilerinin ve en iyi skorların label e tıklayınca gösterilmesi
         {
             if (label7.Visible == false)
             {
@@ -67,10 +67,7 @@ namespace NDP
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
@@ -104,15 +101,17 @@ namespace NDP
             try
             {
                 int gerisayım = Convert.ToInt32(maskedTextBox1.Text);
-            
+                
             AnaForm form2 = new AnaForm(gerisayım);
             form2.Show();
+            
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lütfen süre giriniz");
             }
         }
+
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -123,5 +122,7 @@ namespace NDP
         {
             TıklamaOlayı2(sender, e);
         }
+
+        
     }
 }

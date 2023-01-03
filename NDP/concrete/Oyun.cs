@@ -8,19 +8,22 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 using NDP.Properties;
+using System.Reflection;
 
 namespace NDP.concrete
 {
 
     public class Oyun : IOyun
     {
-        public Oyun(Panel panelGemi, Panel panelSavaşalanı)
+        public Oyun(Panel panelGemi, Panel panelSavaşalanı,Label skor)
         {
             _PanelGemi = panelGemi;
             _PanelSavaşalanı = panelSavaşalanı;
             _hareketTimer.Tick += _hareketTimer_Tick;
             _denizaltıoluşmaTimerı.Tick += DenizAltıOluşmaTimer_Tick;
             _kutuoluşturmaTimer.Tick += _kutuoluşturmaTimer_Tick;
+            _skor=skor;
+            
         }
 
 
@@ -35,23 +38,29 @@ namespace NDP.concrete
             DenizaltılarıHareketEttir();
             VurulanDenizaltılarıÇıkar();
         }
-
-        private void VurulanDenizaltılarıÇıkar()
+        public int skor = 0;
+        public void VurulanDenizaltılarıÇıkar()
         {
+           
+
             for (var i=_denizaltı.Count-1;i>=0;i--)
             {
                 var denizaltı = _denizaltı[i];
                 var vuranMermi = denizaltı.VurulduMu(_mermiler);
                 if (vuranMermi is null) continue;
+                skor += 10;
+                _skor.Text = skor.ToString();
                 _denizaltı.Remove(denizaltı);
                 _mermiler.Remove(vuranMermi); 
                 _PanelSavaşalanı.Controls.Remove(denizaltı);
                 _PanelSavaşalanı.Controls.Remove(vuranMermi );
             }
-            
-        }
 
-        private void DenizaltılarıHareketEttir()
+
+        }
+        
+
+        public void DenizaltılarıHareketEttir()
         {
             for (int i = _denizaltı.Count - 1; i >= 0; i--)
             {
@@ -63,6 +72,7 @@ namespace NDP.concrete
                     _PanelSavaşalanı.Controls.Remove(denizaltı);
                 }
             }
+           
         }
        
         private void DenizAltıOluşmaTimer_Tick(object sender, EventArgs e)
@@ -100,6 +110,7 @@ namespace NDP.concrete
         private readonly List<Denizaltı> _denizaltı = new List<Denizaltı>();
         private readonly Timer _kutuoluşturmaTimer = new Timer { Interval = 10000 };  //10 saniyede bir kutu oluşacak
         private readonly List<Kutu>_kutular=new List<Kutu>();
+        private readonly Label _skor;
       
         public void AteşEt()
         {
@@ -121,7 +132,7 @@ namespace NDP.concrete
             
 
         }
-
+        
         private void KutuOluştur()
         {
             var kutu = new Kutu(_PanelGemi.Width, _PanelGemi.Size);
@@ -159,12 +170,7 @@ namespace NDP.concrete
             _PanelGemi.Controls.Add(_gemi);
      
         }
-        private void Bitir()
-        {
-            if (!DevamEdiyorMu) return;
-            DevamEdiyorMu = false;
-            ZamanlayıcıyıDurdur();
-        }
+      
 
 
         public void GemiyiHareketEttir(Yon yon)
@@ -173,5 +179,6 @@ namespace NDP.concrete
             _gemi.HareketEttir(yon);
         }
 
+       
     }
 }

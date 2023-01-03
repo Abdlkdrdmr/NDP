@@ -20,21 +20,22 @@ namespace NDP
         private readonly Oyun _oyun;//_oyun adında bir değişken tanımlıyoruz.
         private int gerisayım;
         private bool oyunDuraklatıldı;
+        public  int Score;
+        public string mesaj;
         
-
 
         public AnaForm(int gerisayım)
         {
             InitializeComponent();
 
             this.gerisayım = gerisayım;
-            _oyun = new Oyun(panelGemi, panelSavaşalanı);
+           
+            _oyun = new Oyun(panelGemi, panelSavaşalanı,skor);
             oyunDuraklatıldı = false;
             
+
         }
-
         
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();//Bütün uygulamaları kapatmak için kullandım.
@@ -85,7 +86,7 @@ namespace NDP
                 if (gerisayım == 0)
                 {
                     _oyun.ZamanlayıcıyıDurdur();// süre bitince arka planda duruyor.
-                    MessageBox.Show("puanınız:" + label5.Text);
+                    MessageBox.Show("puanınız:" + skor.Text);
                 }
             }
             else if (gerisayım < 0)
@@ -97,17 +98,24 @@ namespace NDP
         }
 
 
-        private void AnaForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        
+        
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Form1 getir= new Form1();
             getir.Show();
         }
 
+        private void skor_TextChanged(object sender, EventArgs e)
+        {
 
+            if (true)
+            {
+               
+                adet.Text = (Convert.ToInt32(skor.Text)/10).ToString();// vurulan denizaltı sayısını veriyor.
+            }
+           
+        }
     }
 }

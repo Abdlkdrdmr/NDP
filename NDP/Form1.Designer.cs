@@ -127,6 +127,7 @@
             this.textboxoyuncuadı.Name = "textboxoyuncuadı";
             this.textboxoyuncuadı.Size = new System.Drawing.Size(121, 20);
             this.textboxoyuncuadı.TabIndex = 3;
+            
             // 
             // label6
             // 
@@ -276,7 +277,6 @@
             this.Name = "Form1";
             this.Text = resources.GetString("$this.Text");
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

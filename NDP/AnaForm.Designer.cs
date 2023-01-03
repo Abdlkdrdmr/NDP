@@ -35,11 +35,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.adet = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.skor = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,11 +63,11 @@
             this.panelBilgi.Controls.Add(this.label9);
             this.panelBilgi.Controls.Add(this.label1);
             this.panelBilgi.Controls.Add(this.pictureBox3);
-            this.panelBilgi.Controls.Add(this.label8);
+            this.panelBilgi.Controls.Add(this.adet);
             this.panelBilgi.Controls.Add(this.pictureBox2);
             this.panelBilgi.Controls.Add(this.label7);
             this.panelBilgi.Controls.Add(this.label6);
-            this.panelBilgi.Controls.Add(this.label5);
+            this.panelBilgi.Controls.Add(this.skor);
             this.panelBilgi.Controls.Add(this.label4);
             this.panelBilgi.Controls.Add(this.label3);
             this.panelBilgi.Controls.Add(this.label2);
@@ -118,15 +118,15 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // label8
+            // adet
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(97, 605);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 35);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "label8";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.adet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.adet.Location = new System.Drawing.Point(97, 605);
+            this.adet.Name = "adet";
+            this.adet.Size = new System.Drawing.Size(91, 35);
+            this.adet.TabIndex = 6;
+            this.adet.Text = "0";
+            this.adet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -158,15 +158,16 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "label5";
             // 
-            // label5
+            // skor
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(141, 356);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 18);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
+            this.skor.AutoSize = true;
+            this.skor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.skor.Location = new System.Drawing.Point(141, 356);
+            this.skor.Name = "skor";
+            this.skor.Size = new System.Drawing.Size(17, 18);
+            this.skor.TabIndex = 4;
+            this.skor.Text = "0";
+            this.skor.TextChanged += new System.EventHandler(this.skor_TextChanged);
             // 
             // label4
             // 
@@ -236,7 +237,7 @@
             // 
             // panelSavaşalanı
             // 
-            this.panelSavaşalanı.BackgroundImage = global::NDP.Properties.Resources.savaşalanı;
+            this.panelSavaşalanı.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
             this.panelSavaşalanı.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelSavaşalanı.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSavaşalanı.Location = new System.Drawing.Point(0, 128);
@@ -246,7 +247,7 @@
             // 
             // panelGemi
             // 
-            this.panelGemi.BackgroundImage = global::NDP.Properties.Resources.Gökyüzü;
+            this.panelGemi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.panelGemi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelGemi.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelGemi.Location = new System.Drawing.Point(0, 0);
@@ -265,7 +266,6 @@
             this.Controls.Add(this.panelBilgi);
             this.Name = "AnaForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.AnaForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
             this.panelBilgi.ResumeLayout(false);
             this.panelBilgi.PerformLayout();
@@ -285,11 +285,11 @@
         private System.Windows.Forms.Label labelkalansüre;
         private System.Windows.Forms.Label geriSayımLabeli;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label adet;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label skor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
